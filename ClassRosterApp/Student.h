@@ -9,7 +9,11 @@
 #ifndef Student_h
 #define Student_h
 
+#include <iostream>
 #include <stdio.h>
+#include "Degree.h"
+
+using namespace std;
 
 class Student {
 private:
@@ -39,6 +43,7 @@ public:
     void setAge(int age);
     void setDaysInCourse(int daysInCourse[]);
     void setDegreeProgram(DegreeProgram degreeProgram);
-}
+    void print();
+};
 
 #endif /* Student_hpp */
