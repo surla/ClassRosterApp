@@ -13,7 +13,7 @@
 
 class Student {
 private:
-    string studentID;
+    string studentId;
     string firstName;
     string lastName;
     string emailAddress;
@@ -30,6 +30,15 @@ public:
     int getAge();
     int getDaysInCourse();
     DegreeProgram getDegreeProgram();
+
+//Mutators (setters)
+    void setStudentId(string studentId);
+    void setFirstName(string firstName);
+    void setLastName(string lastName);
+    void setEmailAddress(string emailAddress);
+    void setAge(int age);
+    void setDaysInCourse(int daysInCourse[]);
+    void setDegreeProgram(DegreeProgram degreeProgram);
 }
 
 #endif /* Student_hpp */
