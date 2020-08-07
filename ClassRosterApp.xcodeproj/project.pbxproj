@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		51C05A7C24DCD6DD00CE406B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51C05A7B24DCD6DD00CE406B /* main.cpp */; };
+		51C05A8724DCD89C00CE406B /* Student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51C05A8524DCD89C00CE406B /* Student.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,8 @@
 		51C05A7824DCD6DD00CE406B /* ClassRosterApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ClassRosterApp; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C05A7B24DCD6DD00CE406B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		51C05A8324DCD70200CE406B /* Degree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Degree.h; sourceTree = "<group>"; };
+		51C05A8524DCD89C00CE406B /* Student.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Student.cpp; sourceTree = "<group>"; };
+		51C05A8624DCD89C00CE406B /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 			children = (
 				51C05A7B24DCD6DD00CE406B /* main.cpp */,
 				51C05A8324DCD70200CE406B /* Degree.h */,
+				51C05A8524DCD89C00CE406B /* Student.cpp */,
+				51C05A8624DCD89C00CE406B /* Student.h */,
 			);
 			path = ClassRosterApp;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51C05A7C24DCD6DD00CE406B /* main.cpp in Sources */,
+				51C05A8724DCD89C00CE406B /* Student.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
