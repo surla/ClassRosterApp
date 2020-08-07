@@ -49,8 +49,6 @@ public:
     void setDaysInCourse(int daysInCourse[]);
     void setDegreeProgram(DegreeProgram degreeProgram);
     void print();
-    
-
 };
 
-#endif /* Student_hpp */
+#endif /* Student_h */
