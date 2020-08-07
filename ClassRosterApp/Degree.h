@@ -12,7 +12,7 @@
 #include <stdio.h>
 using namespace std;
 
-enum class DegreeProgram { SECURITY, NETWORK, SOFTWARE };
+enum DegreeProgram { SECURITY, NETWORK, SOFTWARE };
 const string degreeProgramStrings[] = { "SECURITY", "NETWORK", "SOFTWARE" };
 
 #endif /* Degree_h */
