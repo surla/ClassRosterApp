@@ -20,6 +20,16 @@ private:
     int age;
     int daysInCourse[3];
     DegreeProgram degreeProgram;
+
+public:
+//Accessors (getter)
+    string getStudentId();
+    string getFirstName();
+    string getLastName();
+    string getEmailAddress();
+    int getAge();
+    int getDaysInCourse();
+    DegreeProgram getDegreeProgram();
 }
 
 #endif /* Student_hpp */
