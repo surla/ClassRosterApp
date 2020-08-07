@@ -8,10 +8,11 @@
 
 #ifndef Degree_h
 #define Degree_h
-
+#include <iostream>
 #include <stdio.h>
+using namespace std;
 
-enum DegreeProgram = { SECURITY, NETWORK, SOFTWARE };
+enum class DegreeProgram { SECURITY, NETWORK, SOFTWARE };
 const string degreeProgramStrings[] = { "SECURITY", "NETWORK", "SOFTWARE" };
 
-#endif /* Degree_hpp */
+#endif /* Degree_h */
