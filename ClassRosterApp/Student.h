@@ -5,10 +5,6 @@
 //  Created by Joseph Surla on 8/7/20.
 //  Copyright © 2020 Joseph Surla. All rights reserved.
 //
-
-#ifndef Student_h
-#define Student_h
-
 #include <iostream>
 #include <stdio.h>
 #include "Degree.h"
@@ -17,7 +13,7 @@ using namespace std;
 
 class Student {
 private:
-    string studentId;
+    string studentID;
     string firstName;
     string lastName;
     string emailAddress;
@@ -32,16 +28,16 @@ public:
     Student(string studentId, string firstName, string lastName, string emailAddress, int age, int daysInCourse[], DegreeProgram degreeProgram);
 
 //Accessors (getter)
-    string getStudentId();
+    string getStudentID();
     string getFirstName();
     string getLastName();
     string getEmailAddress();
     int getAge();
-    int getDaysInCourse();
+    int* getDaysInCourse();
     DegreeProgram getDegreeProgram();
     
 //Mutators (setters)
-    void setStudentId(string studentId);
+    void setStudentID(string studentID);
     void setFirstName(string firstName);
     void setLastName(string lastName);
     void setEmailAddress(string emailAddress);
@@ -50,5 +46,3 @@ public:
     void setDegreeProgram(DegreeProgram degreeProgram);
     void print();
 };
-
-#endif /* Student_h */
