@@ -26,6 +26,11 @@ private:
     DegreeProgram degreeProgram;
 
 public:
+//Empty constructor
+    Student();
+//Full constructor
+    Student(string studentId, string firstName, string lastName, string emailAddress, int age, int daysInCourse[], DegreeProgram degreeProgram);
+
 //Accessors (getter)
     string getStudentId();
     string getFirstName();
@@ -34,7 +39,7 @@ public:
     int getAge();
     int getDaysInCourse();
     DegreeProgram getDegreeProgram();
-
+    
 //Mutators (setters)
     void setStudentId(string studentId);
     void setFirstName(string firstName);
@@ -44,6 +49,8 @@ public:
     void setDaysInCourse(int daysInCourse[]);
     void setDegreeProgram(DegreeProgram degreeProgram);
     void print();
+    
+
 };
 
 #endif /* Student_hpp */
