@@ -21,7 +21,6 @@ Student::Student() {
     this->age = 0;
     
     for (int i = 0; i < 3; i++) this->daysInCourse[i] = 0;
-    
 }
 
 //Full constructor

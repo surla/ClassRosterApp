@@ -6,13 +6,10 @@
 //  Copyright © 2020 Joseph Surla. All rights reserved.
 //
 
-#ifndef Degree_h
-#define Degree_h
+#pragma once
 #include <iostream>
 #include <stdio.h>
 using namespace std;
 
 enum DegreeProgram { SECURITY, NETWORK, SOFTWARE };
 const string degreeProgramStrings[] = { "SECURITY", "NETWORK", "SOFTWARE" };
-
-#endif /* Degree_h */
