@@ -11,6 +11,7 @@
 		51C05A8C24DD0D8800CE406B /* Student.h in Sources */ = {isa = PBXBuildFile; fileRef = 51C05A8624DCD89C00CE406B /* Student.h */; };
 		51C05A8D24DD0D8C00CE406B /* Degree.h in Sources */ = {isa = PBXBuildFile; fileRef = 51C05A8324DCD70200CE406B /* Degree.h */; };
 		51C05A8E24DD0D9000CE406B /* Student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51C05A8524DCD89C00CE406B /* Student.cpp */; };
+		51F0335224E0040400AA02CA /* Roster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51F0335024E0040400AA02CA /* Roster.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,8 +32,8 @@
 		51C05A8324DCD70200CE406B /* Degree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Degree.h; sourceTree = "<group>"; };
 		51C05A8524DCD89C00CE406B /* Student.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Student.cpp; sourceTree = "<group>"; };
 		51C05A8624DCD89C00CE406B /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
-		51C05A8824DCFCC300CE406B /* Roster.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Roster.cpp; sourceTree = "<group>"; };
-		51C05A8924DCFCC300CE406B /* Roster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Roster.h; sourceTree = "<group>"; };
+		51F0335024E0040400AA02CA /* Roster.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Roster.cpp; sourceTree = "<group>"; };
+		51F0335124E0040400AA02CA /* Roster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Roster.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +68,9 @@
 			children = (
 				51C05A7B24DCD6DD00CE406B /* main.cpp */,
 				51C05A8324DCD70200CE406B /* Degree.h */,
+				51F0335024E0040400AA02CA /* Roster.cpp */,
+				51F0335124E0040400AA02CA /* Roster.h */,
 				51C05A8524DCD89C00CE406B /* Student.cpp */,
-				51C05A8824DCFCC300CE406B /* Roster.cpp */,
-				51C05A8924DCFCC300CE406B /* Roster.h */,
 				51C05A8624DCD89C00CE406B /* Student.h */,
 			);
 			path = ClassRosterApp;
@@ -132,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51F0335224E0040400AA02CA /* Roster.cpp in Sources */,
 				51C05A8E24DD0D9000CE406B /* Student.cpp in Sources */,
 				51C05A8D24DD0D8C00CE406B /* Degree.h in Sources */,
 				51C05A8C24DD0D8800CE406B /* Student.h in Sources */,
