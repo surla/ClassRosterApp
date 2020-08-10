@@ -22,11 +22,24 @@ public:
     //Full constructor
     Roster(int numStudents);
     
+    //Parses studentData[]
     void parseAdd(string dataRow);
+    
+    //Creates instances of Student class and adds to classRosterArray
     void add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram);
-    void printAll();
+    
+    //Removes student from class roster
     void remove(string studentID);
+    
+    //Prints class roster
+    void printAll();
+    
+    //Prints average days in course
     void printAverageDaysInCourse(string studentID);
+    
+    //Prints invalid email
     void printInvalidEmails();
+    
+    //Prints student information by degree program
     void printByDegreeProgram(DegreeProgram degreeProgram);
 };

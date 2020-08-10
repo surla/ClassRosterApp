@@ -98,24 +98,12 @@ void Roster::remove(string studentID) {
         
     }
     
-    
     cout << "Error: Can not remove student. Student ID not found! Try again.\n";
 }
 
 void Roster::printAll() {
     for (int i = 0; i < numOfStudents; i++) {
         classRosterArray[i]->print();
-    }
-}
-
-void Roster::printInvalidEmails() {
-    const regex pattern("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
-    
-    for (int i = 0; i < 5; i++) {
-        string email = classRosterArray[i]->getEmailAddress();
-        if (!regex_match(email, pattern)) {
-            cout << email << endl;
-        }
     }
 }
 
@@ -130,6 +118,17 @@ void Roster::printAverageDaysInCourse(string studentID) {
             
             double average = (float)sum / 3;
             cout << studentID << ": Average day in courses is " << average << "." << endl;
+        }
+    }
+}
+
+void Roster::printInvalidEmails() {
+    const regex pattern("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
+    
+    for (int i = 0; i < 5; i++) {
+        string email = classRosterArray[i]->getEmailAddress();
+        if (!regex_match(email, pattern)) {
+            cout << email << endl;
         }
     }
 }
