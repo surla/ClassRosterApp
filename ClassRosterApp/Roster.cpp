@@ -12,12 +12,14 @@
 #include <regex>
 using namespace std;
 
+//Empty constructor set to default values
 Roster::Roster() {
     this->studentIndex = -1;
     this->numOfStudents = 0;
     this->classRosterArray = nullptr;
 }
 
+//Full constructor
 Roster::Roster(int numOfStudents) {
     this->studentIndex = -1;
     this->numOfStudents = numOfStudents;
@@ -86,10 +88,18 @@ void Roster::add(string studentID, string firstName, string lastName, string ema
 
 void Roster::remove(string studentID) {
     for (int i = 0; i < 5; i++) {
-        if (classRosterArray[i]->getStudentID() == studentID) {
-            delete classRosterArray[i];
+        if (this->classRosterArray[i]->getStudentID() == studentID) {
+            delete this->classRosterArray[i];;
+            this->classRosterArray[i] = this->classRosterArray[numOfStudents - 1];
+            cout << "Student with ID of " << studentID << " successfully removed.";
+            numOfStudents--;
+            return;
         }
+        
     }
+    
+    
+    cout << "Error: Can not remove student. Student ID not found! Try again.\n";
 }
 
 void Roster::printAll() {
@@ -119,7 +129,7 @@ void Roster::printAverageDaysInCourse(string studentID) {
             }
             
             double average = (float)sum / 3;
-            cout << studentID << ": Average day in courses is " << average << endl;
+            cout << studentID << ": Average day in courses is " << average << "." << endl;
         }
     }
 }

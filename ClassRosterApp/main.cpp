@@ -6,7 +6,6 @@
 //  Copyright © 2020 Joseph Surla. All rights reserved.
 //
 
-
 #include <iostream>
 #include "Roster.h"
 using namespace std;
@@ -25,7 +24,7 @@ int main(int argc, const char * argv[]) {
     //Instance of Roster class
     Roster* classRoster = new Roster(numOfStudents);
     
-    cout << "***** Parsing student data and adding books *****" << endl;
+    cout << "***** Parsing student data and adding students *****" << endl;
     
     //Adds each student to classRoster
     while (index != numOfStudents) {
@@ -37,25 +36,31 @@ int main(int argc, const char * argv[]) {
     classRoster->printAll();
     
     //Prints invalid emails
-    cout << "***** Invalid Emails *****" << endl;
+    cout << "\n---- Invalid Emails ----" << endl;
     classRoster->printInvalidEmails();
     
     //Prints average days in course
-    cout << "***** Students average days in course *****" << endl;
+    cout << "\n---- Students average days in course ----" << endl;
     for (int i = 0; i < numOfStudents; i++) {
         string studentID = studentData[i].substr(0,2);
         classRoster->printAverageDaysInCourse(studentID);
     }
     
+    //Prints students in the SOFTWARE degree program
+    cout << "\n---- Students in the SOFTWARE degree program ----\n";
     classRoster->printByDegreeProgram(SOFTWARE);
     
     //Removes student with student ID: A3
-//    classRoster->remove("A3");
+    cout << "\n***** Removing student from roster *****\n";
+    classRoster->remove("A3");
     
     //Prints classRoster with student 'A3' removed
+    cout << "\n---- Class Roster ----\n";
     classRoster->printAll();
     
-//    classRoster->remove("A3");
+    //Throws error because student ID 'A3' has been removed
+    cout << "\n***** Removing student from roster *****\n";
+    classRoster->remove("A3");
     
     return 0;
 };
