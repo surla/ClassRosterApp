@@ -19,8 +19,12 @@ private:
 public:
     //Default constructor
     Roster();
+    
     //Full constructor
     Roster(int numStudents);
+    
+    //Destructor
+    ~Roster();
     
     //Parses studentData[]
     void parseAdd(string dataRow);

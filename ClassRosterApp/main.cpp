@@ -55,7 +55,7 @@ int main(int argc, const char * argv[]) {
     classRoster->remove("A3");
     
     //Prints classRoster with student 'A3' removed
-    cout << "\n---- Class Roster ----\n";
+    cout << "\n\n---- Class Roster ----\n";
     classRoster->printAll();
     
     //Throws error because student ID 'A3' has been removed

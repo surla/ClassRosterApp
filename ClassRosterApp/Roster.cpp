@@ -26,6 +26,14 @@ Roster::Roster(int numOfStudents) {
     this->classRosterArray = new Student*[numOfStudents];
 }
 
+//Destructor
+Roster::~Roster() {
+    cout << "Destructor called." << endl;
+    for (int i = 0; i <= numOfStudents; i++) {
+        delete this->classRosterArray[i];
+    }
+    delete classRosterArray;
+}
 void Roster::parseAdd(string dataRow) {
     size_t rhs = dataRow.find(",");
     string studentID = dataRow.substr(0, rhs);
