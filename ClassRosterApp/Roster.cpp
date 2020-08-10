@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include "Roster.h"
 #include "Degree.h"
+#include <regex>
 using namespace std;
 
 Roster::Roster() {
@@ -83,4 +84,53 @@ void Roster::add(string studentID, string firstName, string lastName, string ema
     daysInCourse[2] = daysInCourse3;
     
     classRosterArray[studentIndex] = new Student(studentID, firstName, lastName, emailAddress, age, daysInCourse, degreeProgram);
+}
+
+void Roster::printAll() {
+    for (int i = 0; i < numOfStudents; i++) {
+        classRosterArray[i]->print();
+    }
+}
+
+void Roster::remove(string studentID) {
+    for (int i = 0; i < 5; i++) {
+        if (classRosterArray[i]->getStudentID() == studentID) {
+            delete classRosterArray[i];
+        }
+    }
+}
+
+void Roster::printAverageDaysInCourse(string studentID) {
+    for (int i = 0; i < 5; i++) {
+        if (classRosterArray[i]->getStudentID() == studentID) {
+            int* student = classRosterArray[i]->getDaysInCourse();
+            int sum = 0;
+            for (int i = 0; i < 3; i++) {
+                sum += student[i];
+            }
+            
+            double average = (float)sum / 3;
+            cout << "Average = " << average << endl;
+        }
+    }
+}
+
+void Roster::printInvalidEmails() {
+    const regex pattern("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
+    
+    for (int i = 0; i < 5; i++) {
+        string email = classRosterArray[i]->getEmailAddress();
+        if (!regex_match(email, pattern)) {
+            cout << email << endl;
+        }
+    }
+}
+
+void Roster::printByDegreeProgram(DegreeProgram degreeProgram) {
+    for (int i = 0; i < numOfStudents; i++) {
+        Student* student = classRosterArray[i];
+        if (student->getDegreeProgram() == degreeProgram) {
+            student->print();
+        }
+    }
 }

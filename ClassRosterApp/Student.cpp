@@ -97,13 +97,10 @@ void Student::setDegreeProgram(DegreeProgram degreeProgram) {
 }
 
 void Student::print() {
-    cout << studentID;
-    cout << firstName;
-    cout << lastName;
-    cout << emailAddress;
-    cout << age;
-    cout << daysInCourse[0];
-    cout << daysInCourse[1];
-    cout << daysInCourse[2];
-    cout << degreeProgram;
+    cout << studentID << "\t";
+    cout << "First Name: " << getFirstName() << "\t";
+    cout << "Last Name: " << getLastName() << "\t";
+    cout << "Age: " << getAge() << "\t";
+    cout << "daysInCourse: {" << daysInCourse[0] << ", " << daysInCourse[1] << ", " << daysInCourse[2] << "} ";
+    cout << getDegreeProgram() << endl;
 }
