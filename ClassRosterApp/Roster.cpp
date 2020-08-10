@@ -72,8 +72,6 @@ void Roster::parseAdd(string dataRow) {
     
     studentIndex++;
     add(studentID, firstName, lastName, emailAddress, age, daysInCourse1, daysInCourse2, daysInCourse3, degreeProgram);
-    
-    cout << classRosterArray[studentIndex] << endl;
 }
 
 void Roster::add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram) {
@@ -86,16 +84,27 @@ void Roster::add(string studentID, string firstName, string lastName, string ema
     classRosterArray[studentIndex] = new Student(studentID, firstName, lastName, emailAddress, age, daysInCourse, degreeProgram);
 }
 
+void Roster::remove(string studentID) {
+    for (int i = 0; i < 5; i++) {
+        if (classRosterArray[i]->getStudentID() == studentID) {
+            delete classRosterArray[i];
+        }
+    }
+}
+
 void Roster::printAll() {
     for (int i = 0; i < numOfStudents; i++) {
         classRosterArray[i]->print();
     }
 }
 
-void Roster::remove(string studentID) {
+void Roster::printInvalidEmails() {
+    const regex pattern("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
+    
     for (int i = 0; i < 5; i++) {
-        if (classRosterArray[i]->getStudentID() == studentID) {
-            delete classRosterArray[i];
+        string email = classRosterArray[i]->getEmailAddress();
+        if (!regex_match(email, pattern)) {
+            cout << email << endl;
         }
     }
 }
@@ -110,18 +119,7 @@ void Roster::printAverageDaysInCourse(string studentID) {
             }
             
             double average = (float)sum / 3;
-            cout << "Average = " << average << endl;
-        }
-    }
-}
-
-void Roster::printInvalidEmails() {
-    const regex pattern("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
-    
-    for (int i = 0; i < 5; i++) {
-        string email = classRosterArray[i]->getEmailAddress();
-        if (!regex_match(email, pattern)) {
-            cout << email << endl;
+            cout << studentID << ": Average day in courses is " << average << endl;
         }
     }
 }
